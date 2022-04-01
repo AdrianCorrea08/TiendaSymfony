@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>{% block title %}Wine List{% endblock %}</title>
+        <title>{% block title %}Tienda Online{% endblock %}</title>
         {% block stylesheets %}
         <style type="text/css">
           body {
@@ -116,6 +116,30 @@
                         </div>
                     </section>
 
+                    
+                        <table class="table table-striped" >
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Cantidad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" >1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                  
+
+
+                    
+
                     {% endblock %}
                 </div>
                 {% endblock %}
@@ -130,7 +154,14 @@
             <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
             <script src="https://unpkg.com/vuex"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+            <v-main>        
+                <v-card class="mx-auto mt-5" max-width="900">        
+                <v-data-table
+                    :items="productos"
+                    class="elevation-19"
+                ></v-data-table>
+                </v-card>
+            </v-main>
 
             <script>
                 let app = new Vue({
